@@ -1,0 +1,80 @@
+1. Lists [ ]
+    - Ordered, mutable, allows duplicates
+    - Designed for sequential data, dyanamic collections, orderedness.
+    - Optimized for iterating, appending, ordered processing.
+
+    Uses:
+        comments = [
+        "Nice post",
+        "Helpful article",
+        "Thanks!"
+        ]
+
+        users = [
+        {"id": 1},
+        {"id": 2},
+        {"id": 3}
+        ]
+
+    Relevance in Django: Querysets, Template Rendering, Form Choices, settings.py config data
+    
+
+2. Tuples ( )
+    - Ordered, immutable, allows duplicates
+    - Designed for fixed data, protected data, structured records
+    - Improve data safety, predictability, hashability
+
+    Uses:
+        Coordinates: location = (27.7, 85.3)
+
+        Database records: user = (1, "Alice", "admin")
+
+        Returning Multiple Values: 
+        def get_user():
+            return ("Alice", 25)
+
+    Relevance in Django: Field Choices, config data
+
+
+3. Sets { }
+    - Unordered, mutable, unique values only
+    - Designed for duplicate removals, mathemical set operations
+
+    Uses:
+        Duplicate removals:
+            nums = [1, 1, 2, 3, 3]
+            unique = set(nums)
+
+        Fast Lookups:
+            permissions = {"read", "write", "delete"}
+            if "delete" in permissions:
+            ...
+        
+    Django Relevance: Permission checking (lookups), Deduplicating query results, 
+
+
+4. Dict { " ": " "}
+    - Stores key-value pairs, are mutable
+    - Allows for fast lookups
+    - Dictionaries model real-world entities
+    - Optimized for named access, structured data, instant retrieval
+    - Used to implement objects, config data, APIs, serializers, caches
+
+    Uses:
+        JSON Data:
+            {
+                "id": 1,
+                "title": "Post"
+            }
+        
+        User Profile Data:
+        user = {
+                    "username": "john",
+                    "email": "john@example.com"
+                }
+        
+    Django Relevance: Everywhere (Request data, serializers(JSON response data), Context data for templates, )
+
+
+
+
