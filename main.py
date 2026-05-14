@@ -116,4 +116,3 @@ print("\nAll details:")
 for key, value in user.items():
     print(key, ":", value)
 
-#
